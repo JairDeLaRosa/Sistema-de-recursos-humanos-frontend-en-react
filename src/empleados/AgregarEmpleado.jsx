@@ -17,8 +17,8 @@ export const AgregarEmpleado = () => {
     const resultado = await axios.post(urlBase,empleado)
       if(resultado.data!= null){
         Swal.fire({
-          title: "Good job!",
-          text: "You clicked the button!",
+          title: "Usuario agregado!",
+          text: "El usuario "+resultado.data.nombre+" ha sido agregado correctamente",
           icon: "success"
         });
         navigate("/")
